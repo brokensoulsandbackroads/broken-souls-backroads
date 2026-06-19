@@ -56,21 +56,21 @@
       <div class="cards">
         <article>
           <img src="assets/angel-in-the-room.jpg" alt="Angel In The Room artwork">
-          <a href="https://youtu.be/EvVSE1tXBiA" target="_blank">
+          <a href="#" onclick="playSong('EvVSE1tXBiA', 'Angel In The Room'); return false;">
     <h3>Angel In The Room</h3>
 </a>
           <p>A song about love without words.</p>
         </article>
         <article>
           <img src="assets/carousel.jpg" alt="Carousel Built By A Lunatic artwork">
-          <a href="https://youtu.be/EsFNAKDNeLs" target="_blank">
+            <a href="#" onclick="playSong('EsFNAKDNeLs', 'Carousel Built By A Lunatic'); return false;">
     <h3>Carousel Built By A Lunatic</h3>
 </a>
           <p>Heavy country chaos for racing thoughts.</p>
         </article>
         <article>
           <img src="assets/Thorn.jpg" alt="Thorn artwork">
-          <a href="https://youtu.be/6OMHon-EdZs" target="_blank">
+          <a href="#" onclick="playSong('6OMHon-EdZs', 'Thorn in my Soul'); return false;">
     <h3>Thorn in my Soul</h3>
 </a>
           <p>A song not about forgivness but understanding...</p>
@@ -132,5 +132,24 @@
 
   <footer>© <span id="year"></span> Broken Souls &amp; Backroads</footer>
   <script src="script.js"></script>
+    <div id="music-player" class="music-player">
+  <div class="player-info">
+    <strong>Now Playing</strong>
+    <span id="player-title">Song Title</span>
+  </div>
+
+  <div class="player-video">
+    <iframe
+      id="player-frame"
+      src=""
+      title="YouTube music player"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <button class="close-player" onclick="closePlayer()">Close</button>
+</div>
 </body>
 </html>
