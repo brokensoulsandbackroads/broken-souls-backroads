@@ -1,0 +1,334 @@
+/* Homepage-only polish for Broken Souls & Backroads */
+
+.home-hero{
+  min-height:calc(100vh - 78px);
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 50% 26%,rgba(216,155,76,.18),transparent 32%),
+    linear-gradient(90deg,rgba(0,0,0,.56),rgba(0,0,0,.10) 50%,rgba(0,0,0,.58));
+}
+
+.home-hero .hero-card{
+  width:min(1050px,94vw);
+  border:1px solid rgba(216,155,76,.5);
+  border-radius:4px;
+  padding:clamp(28px,5vw,56px);
+  backdrop-filter:blur(3px);
+}
+
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 18px;
+  padding:8px 13px;
+  border:1px solid rgba(216,155,76,.45);
+  background:rgba(8,6,4,.62);
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.72rem;
+  font-weight:900;
+}
+
+.hero-kicker::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 14px rgba(216,155,76,.8);
+}
+
+.home-hero h1{
+  font-size:clamp(3.25rem,8.5vw,7.8rem);
+}
+
+.hero-intro{
+  max-width:720px;
+  margin:0 auto 26px;
+  color:#ead9bd;
+  line-height:1.75;
+  font-size:clamp(.98rem,1.8vw,1.13rem);
+}
+
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.hero-actions .btn{
+  min-width:175px;
+}
+
+.hero-socials{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+
+.hero-socials a{
+  color:var(--muted);
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.72rem;
+  font-weight:900;
+  padding:7px 10px;
+  border-bottom:1px solid transparent;
+}
+
+.hero-socials a:hover{
+  color:var(--cream);
+  border-bottom-color:var(--gold);
+}
+
+.road-strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  max-width:1100px;
+  margin:-34px auto 0;
+  position:relative;
+  z-index:2;
+  padding:0 20px;
+}
+
+.road-strip span{
+  padding:18px 12px;
+  text-align:center;
+  background:#130c08;
+  border:1px solid var(--line);
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-size:.72rem;
+  font-weight:900;
+}
+
+.road-strip span + span{
+  border-left:0;
+}
+
+.section-copy{
+  max-width:720px;
+  margin:14px auto 0;
+  color:var(--muted);
+  line-height:1.75;
+  text-align:center;
+}
+
+.start-here{
+  padding-top:92px;
+}
+
+.start-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.start-card{
+  position:relative;
+  overflow:hidden;
+  min-height:440px;
+  display:flex;
+  align-items:flex-end;
+  border:1px solid rgba(216,155,76,.5);
+  background:#0d0805;
+  box-shadow:0 28px 70px rgba(0,0,0,.4);
+}
+
+.start-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.62;
+  transition:transform .5s ease,opacity .5s ease;
+}
+
+.start-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(5,3,2,.98) 4%,rgba(5,3,2,.78) 38%,rgba(5,3,2,.08) 75%);
+}
+
+.start-card:hover img{
+  transform:scale(1.04);
+  opacity:.78;
+}
+
+.start-card-content{
+  position:relative;
+  z-index:1;
+  width:100%;
+  padding:26px;
+  text-align:left;
+}
+
+.start-card .eyebrow{
+  margin-bottom:9px;
+}
+
+.start-card h3{
+  font-family:Rye,serif;
+  text-transform:uppercase;
+  font-size:clamp(1.45rem,2.8vw,2.2rem);
+  color:var(--cream);
+}
+
+.start-card p{
+  color:#d0b996;
+  line-height:1.6;
+  min-height:52px;
+}
+
+.play-link{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  color:var(--gold);
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:900;
+  font-size:.75rem;
+}
+
+.play-link:hover{
+  color:var(--cream);
+}
+
+.feature-release{
+  max-width:1160px;
+  grid-template-columns:minmax(260px,390px) 1fr;
+  padding:30px;
+  border-color:rgba(216,155,76,.65);
+}
+
+.feature-release img{
+  box-shadow:0 20px 45px rgba(0,0,0,.45);
+}
+
+.feature-copy{
+  padding:10px 12px;
+}
+
+.feature-copy h3{
+  margin-bottom:14px;
+}
+
+.release-note{
+  display:inline-block;
+  margin-top:14px;
+  padding:8px 10px;
+  border:1px solid var(--line);
+  color:var(--muted);
+  font-family:Special Elite,cursive;
+}
+
+.manifesto{
+  padding-top:34px;
+  padding-bottom:34px;
+}
+
+.manifesto-card{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:34px;
+  align-items:center;
+  padding:40px;
+  background:
+    radial-gradient(circle at 10% 15%,rgba(216,155,76,.18),transparent 28%),
+    linear-gradient(145deg,#21140c,#0d0805);
+  border:1px solid rgba(216,155,76,.5);
+}
+
+.manifesto-mark{
+  font-family:Rye,serif;
+  color:var(--gold);
+  text-transform:uppercase;
+  font-size:clamp(2.1rem,5vw,4.4rem);
+  line-height:1.03;
+}
+
+.manifesto-copy p{
+  color:var(--muted);
+  line-height:1.85;
+  margin:0 0 15px;
+}
+
+.manifesto-copy strong{
+  color:var(--cream);
+}
+
+.merch-callout{
+  max-width:1100px;
+  margin:0 auto;
+  padding:42px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(8,6,4,.55),rgba(8,6,4,.90)),
+    url('assets/merch-hero.jpg') center/cover;
+  border:1px solid rgba(216,155,76,.55);
+}
+
+.merch-callout h2{
+  font-size:clamp(2rem,4.5vw,3.8rem);
+}
+
+.merch-callout p{
+  color:#d8c2a2;
+  line-height:1.7;
+  max-width:650px;
+}
+
+.follow-head{
+  margin-bottom:10px;
+}
+
+@media(max-width:900px){
+  .road-strip{grid-template-columns:repeat(2,1fr);margin-top:-20px}
+  .road-strip span + span{border-left:1px solid var(--line)}
+  .road-strip span:nth-child(even){border-left:0}
+  .start-grid{grid-template-columns:1fr;max-width:620px}
+  .start-card{min-height:360px}
+  .feature-release,.manifesto-card{grid-template-columns:1fr}
+  .manifesto-mark{text-align:center}
+  .merch-callout{grid-template-columns:1fr;text-align:center}
+}
+
+@media(max-width:600px){
+  .home-hero{min-height:84vh}
+  .home-hero .hero-card{width:96vw;padding:28px 18px}
+  .home-hero h1{font-size:clamp(2.8rem,15vw,4.6rem)}
+  .hero-actions{display:grid}
+  .hero-actions .btn{width:100%;margin:4px 0}
+  .road-strip{grid-template-columns:1fr;margin-top:0;padding:0}
+  .road-strip span,.road-strip span + span,.road-strip span:nth-child(even){border-left:0;border-right:0;border-top:0}
+  .start-here{padding-top:64px}
+  .start-card{min-height:330px}
+  .feature-release,.manifesto-card,.merch-callout{padding:22px}
+}

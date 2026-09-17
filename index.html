@@ -3,216 +3,241 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Broken Souls & Backroads</title>
-    <meta name="description" content="Broken Souls & Backroads, country music for people who've survived something.">
+    <title>Broken Souls & Backroads | Country Music From The Hard Shoulder</title>
+    <meta name="description" content="Broken Souls & Backroads. Country storytelling for people who've survived something. Listen to the music, follow the stories and explore the road ahead.">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">Broken Souls <span>&amp; Backroads</span></a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="#music">Music</a>
-      <a href="#YouTube">YouTube</a>
+      <a href="#start">Music</a>
+      <a href="#about">About</a>
+      <a href="#youtube">YouTube</a>
       <a href="merch.html">Merch</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero home-hero">
     <div class="hero-card">
-      <p class="eyebrow">Official artist site</p>
+      <p class="hero-kicker">Independent country • stories from the hard shoulder</p>
       <h1>Broken Souls<br><span>&amp; Backroads</span></h1>
       <p class="tagline">Country music for people who've survived something.</p>
-      <div class="actions">
-        <a class="btn" href="#music">Listen Now</a>
-        <a class="btn ghost" href="merch.html">View Merch</a>
+      <p class="hero-intro">
+        Songs about the roads that leave marks: family, grief, recovery, overthinking,
+        bad days, second chances and the occasional laugh when life gets ridiculous.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#start">Start Listening</a>
+        <a class="btn ghost" href="https://open.spotify.com/artist/42CCatK9gErJbL2eBxH7Or?si=-4bUK13kTzWrhmC_0fzN1g" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a class="btn ghost" href="merch.html">Roadside Merch</a>
+      </div>
+
+      <div class="hero-socials" aria-label="Broken Souls and Backroads social links">
+        <a href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="https://www.instagram.com/broken.souls.and.backroads" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
       </div>
     </div>
   </section>
 
+  <div class="road-strip" aria-label="Broken Souls and Backroads themes">
+    <span>Country storytelling</span>
+    <span>Hard-won hope</span>
+    <span>Dark humour</span>
+    <span>Real-life scars</span>
+  </div>
+
   <main>
-    <section id="music" class="section">
+    <section id="start" class="section start-here">
       <div class="section-head">
-        <p class="eyebrow">Latest release</p>
-        <h2>Music from the hard shoulder</h2>
+        <p class="eyebrow">New here?</p>
+        <h2>Pick a road</h2>
+        <p class="section-copy">Three songs, three different corners of Broken Souls &amp; Backroads. Start with the one that sounds most like today.</p>
       </div>
 
-      <article class="feature">
-        <img src="assets/backroads-motel.jpg" alt="Backroads Motel artwork">
-        <div>
-          <p class="eyebrow">Comming Soon!</p>
-          <h3>Backroads Motel Saga Part 1</h3>
-          <p>Some rooms hold secrets. Some hold ghosts. Some leave the porch light on for anyone who needs shelter from the storm.</p>
-          <a class="btn small" href="https://api.ffm.to/sl/e/ps/the-backroads-motel?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDkuMC4wLjAgU2FmYXJpLzUzNy4zNiIsImJyb3dzZXIiOnsibmFtZSI6IkNocm9tZSIsInZlcnNpb24iOiIxNDkuMC4wLjAiLCJtYWpvciI6IjE0OSJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDkuMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiJiODVlNGZlOC0yOTMwLTQ2ZTgtYWFlYy0xNjgwMDk2Y2ViYTciLCJzaWQiOiI1MzVjMGY1My0wOTczLTRkYTYtODBiNy01M2VhYzI2YjVhZWYiLCJpcCI6Ijg2LjE2NC40Ni45NCIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6ImU3MDM0ODAwLWE3ZGQtNDczZS1iZTUzLTExMjMxY2M5MDU3MSIsImlkIjoiNmEzMTQ4MDcyYzAwMDAxNzAwYjExYWIyIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuc3BvdGlmeS5jb20vYXV0aG9yaXplP2NsaWVudF9pZD02NmQzY2RiNDQ4MDc0YTBkODhlOWIwOGJhYWYyZjNkNyZyZXNwb25zZV90eXBlPWNvZGUmcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZzcG90aWZ5JTJGYXV0aG9yaXplJnNjb3BlPXVzZXItcmVhZC1wcml2YXRlJTIwdXNlci1yZWFkLWJpcnRoZGF0ZSUyMHVzZXItcmVhZC1lbWFpbCUyMHVzZXItbGlicmFyeS1tb2RpZnklMjB1c2VyLWxpYnJhcnktcmVhZCUyMHVzZXItcmVhZC1yZWNlbnRseS1wbGF5ZWQlMjB1c2VyLWZvbGxvdy1yZWFkJTIwdXNlci1mb2xsb3ctbW9kaWZ5JTIwdXNlci10b3AtcmVhZCUyMHBsYXlsaXN0LW1vZGlmeS1wdWJsaWMlMjBwbGF5bGlzdC1yZWFkLXByaXZhdGUlMjBwbGF5bGlzdC1tb2RpZnktcHJpdmF0ZSZzdGF0ZT1leUprWWt4cGJtdEpaQ0k2SWpaaE16RTBPREEzTW1Nd01EQXdNVGN3TUdJeE1XRmlNaUlzSW1GamRHbHZibFI1Y0dVaU9tNTFiR3dzSW1OMFlTSTZJbEJ5WlMxVFlYWmxJaXdpZFhObGNrTnZkVzUwY25raU9pSkhRaUlzSW5Ob2IzSjBTV1FpT2lKMGFHVXRZbUZqYTNKdllXUnpMVzF2ZEdWc0lpd2laRzl0WVdsdUlqb2lhSFIwY0hNNkx5OWthWFIwYnk1bWJTSXNJbk5sY25acFkyVk9ZVzFsSWpvaWMzQnZkR2xtZVNJc0luQnliMlIxWTNRaU9pSnpiV0Z5ZEd4cGJtc2lMQ0p5WldScGNtVmpkRlZ5YVNJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0wdmRHaGxMV0poWTJ0eWIyRmtjeTF0YjNSbGJDOXdjbVZ6WVhabFkyRnNiR0poWTJzaUxDSm1ZV3hzWW1GamExVnliQ0k2Ym5Wc2JDd2lhWE5RY21WU1pXeGxZWE5sSWpwMGNuVmxMQ0pwYzBaMWRIVnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltRnlkR2x6ZEVsa0lqb2lObUV4WkdaaU56QXlaREF3TURBek5qQXdaREZsWmpKaUlpd2lZWEowYVhOMFQzZHVaWElpT2lJMVl6VXdZalV4WkRFME1EQXdNREU1TURBMk9EWTRPVEVpTENKaFkzUnBiMjVKWkNJNmJuVnNiQ3dpWjJSd2NrVnVabTl5WTJVaU9uUnlkV1VzSW14cGJtdFVlWEJsSWpwdWRXeHNMQ0oxYzJWeVNWQWlPaUk0Tmk0eE5qUXVORFl1T1RRaUxDSnlaWGRoY21SVmMyVnlTV1FpT201MWJHd3NJbkpsWm1WeWNtRnNTV1FpT201MWJHd3NJblYxYVdRaU9pSmxOekF6TkRnd01DMWhOMlJrTFRRM00yVXRZbVUxTXkweE1USXpNV05qT1RBMU56RWlmUSYxMDExbGp3RUgiLCJzcnZjIjoic3BvdGlmeSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoidGhlLWJhY2tyb2Fkcy1tb3RlbCIsImlzQXV0aG9yaXphdGlvblJlcXVpcmVkIjp0cnVlLCJvd25lciI6IjVjNTBiNTFkMTQwMDAwMTkwMDY4Njg5MSIsInRlbmFudCI6IjVkMmMyOTYzZjBkNTFlZWJkMjRlNzc4NyIsImFyIjoiNmExZGZiNzAyZDAwMDAzNjAwZDFlZjJiIiwiaXNTaG9ydExpbmsiOmZhbHNlLCJuYXRpdmUiOmZhbHNlfQ"
-          target="_blank"
-          rel="noopener noreferrer">
-          Pre-save on Spotify (until release day)</a>
-          <a class="btn small ghost" href="#">Comming soon on YouTube</a>
-        </div>
-      </article>
-
-      <div class="cards">
-        <article>
+      <div class="start-grid">
+        <article class="start-card">
           <img src="assets/angel-in-the-room.jpg" alt="Angel In The Room artwork">
-          <a href="#" onclick="playSong('EvVSE1tXBiA', 'Angel In The Room'); return false;">
-    <h3>Angel In The Room</h3>
-</a>
-          <p>A song about love without words.</p>
+          <div class="start-card-content">
+            <p class="eyebrow">For the quiet battles</p>
+            <h3>Angel In The Room</h3>
+            <p>A song about love without words.</p>
+            <a class="play-link" href="#" onclick="playSong('EvVSE1tXBiA', 'Angel In The Room'); return false;"><i class="fas fa-play"></i> Play song</a>
+          </div>
         </article>
-        <article>
+
+        <article class="start-card">
           <img src="assets/carousel.jpg" alt="Carousel Built By A Lunatic artwork">
-            <a href="#" onclick="playSong('EsFNAKDNeLs', 'Carousel Built By A Lunatic'); return false;">
-    <h3>Carousel Built By A Lunatic</h3>
-</a>
-          <p>Heavy country chaos for racing thoughts.</p>
+          <div class="start-card-content">
+            <p class="eyebrow">For the noisy mind</p>
+            <h3>Carousel Built By A Lunatic</h3>
+            <p>Heavy country chaos for racing thoughts.</p>
+            <a class="play-link" href="#" onclick="playSong('EsFNAKDNeLs', 'Carousel Built By A Lunatic'); return false;"><i class="fas fa-play"></i> Play song</a>
+          </div>
         </article>
-        <article>
-          <img src="assets/Thorn.jpg" alt="Thorn artwork">
-          <a href="#" onclick="playSong('6OMHon-EdZs', 'Thorn in my Soul'); return false;">
-    <h3>Thorn in my Soul</h3>
-</a>
-          <p>A song not about forgivness but understanding...</p>
+
+        <article class="start-card">
+          <img src="assets/Thorn.jpg" alt="Thorn In My Soul artwork">
+          <div class="start-card-content">
+            <p class="eyebrow">For the old wounds</p>
+            <h3>Thorn In My Soul</h3>
+            <p>Not about forgiveness. About understanding.</p>
+            <a class="play-link" href="#" onclick="playSong('6OMHon-EdZs', 'Thorn In My Soul'); return false;"><i class="fas fa-play"></i> Play song</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="motel" class="motel section">
+    <section id="music" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Featured release</p>
+        <h2>The motel doors are open</h2>
+        <p class="section-copy">Seven rooms. Seven stories. One battered roadside motel where every door has something behind it.</p>
+      </div>
 
-    <p class="eyebrow">Just a few releases on YouTube</p>
+      <article class="feature feature-release">
+        <img src="assets/backroads-motel.jpg" alt="Backroads Motel Saga Part 1 artwork">
+        <div class="feature-copy">
+          <p class="eyebrow">Out now</p>
+          <h3>Backroads Motel Saga Part 1</h3>
+          <p>Some rooms hold secrets. Some hold ghosts. Some leave the porch light on for anyone who needs shelter from the storm.</p>
+          <p>The Backroads Motel is storytelling country built one room at a time, with every track opening another door into somebody else's night.</p>
+          <a class="btn small" href="https://open.spotify.com/artist/42CCatK9gErJbL2eBxH7Or?si=-4bUK13kTzWrhmC_0fzN1g" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+          <a class="btn small ghost" href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer">Listen on YouTube</a>
+          <span class="release-note">Pull in. Pick a room. Stay awhile.</span>
+        </div>
+      </article>
+    </section>
 
-    <h2>Please Like & Subscribe!</h2>
+    <section id="about" class="section manifesto">
+      <div class="manifesto-card">
+        <div class="manifesto-mark">Music from<br>the hard<br>shoulder.</div>
+        <div class="manifesto-copy">
+          <p class="eyebrow">What is Broken Souls &amp; Backroads?</p>
+          <p><strong>Not polished Nashville sunshine.</strong> Broken Souls &amp; Backroads lives where country storytelling meets the bits of life people usually leave out of the photograph.</p>
+          <p>The songs move through family, grief, recovery, anxiety, love, bad decisions, second chances and the strange humour that sometimes turns up when everything else has gone sideways.</p>
+          <p>Some tracks whisper. Some kick the door in. They all come from the same place: <strong>real stories deserve a soundtrack too.</strong></p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-        You'll find everything from heartfelt ballads and storytelling country songs
-        to the occasional humorous track inspired by everyday life.
-    </p>
+    <section id="youtube" class="motel section">
+      <div class="section-head">
+        <p class="eyebrow">Down another backroad</p>
+        <h2>Watch &amp; listen on YouTube</h2>
+        <p class="section-copy">Heartfelt country, family stories, darker roads and the occasional song that refuses to behave itself.</p>
+      </div>
 
-    <div class="youtube-grid">
-
-        <a class="youtube-tile" href="https://youtu.be/duFb8F3EG50" target="_blank">
-            <img src="assets/Saved Me From Myself.jpg" alt="Saved Me From Myself artwork">
-            <div class="youtube-info">
-                <h3>Saved Me From Myself</h3>
-                <p>A song about finding hope when everything felt lost.</p>
-            </div>
-            <i class="fab fa-youtube"></i>
+      <div class="youtube-grid">
+        <a class="youtube-tile" href="https://youtu.be/duFb8F3EG50" target="_blank" rel="noopener noreferrer">
+          <img src="assets/Saved Me From Myself.jpg" alt="Saved Me From Myself artwork">
+          <div class="youtube-info">
+            <h3>Saved Me From Myself</h3>
+            <p>A song about finding hope when everything felt lost.</p>
+          </div>
+          <i class="fab fa-youtube"></i>
         </a>
 
-        <a class="youtube-tile" href="https://youtu.be/JlKrSMxGiDY" target="_blank">
-            <img src="assets/I See It In Your Eyes.jpg" alt="I See It In Your Eyes artwork">
-            <div class="youtube-info">
-                <h3>I See It In Your Eyes</h3>
-                <p>This track was written from a father's perspective, 
-                    watching his daughter struggle with thoughts, emotions, 
-                    and challenges that are often hidden behind a smile. 
-                    It's about those quiet moments when the world goes silent and the people who love you can see the weight you're carrying, 
-                    even when no words are spoken..</p>
-            </div>
-            <i class="fab fa-youtube"></i>
+        <a class="youtube-tile" href="https://youtu.be/JlKrSMxGiDY" target="_blank" rel="noopener noreferrer">
+          <img src="assets/I See It In Your Eyes.jpg" alt="I See It In Your Eyes artwork">
+          <div class="youtube-info">
+            <h3>I See It In Your Eyes</h3>
+            <p>A father's perspective on seeing the weight somebody carries, even when they never say it out loud.</p>
+          </div>
+          <i class="fab fa-youtube"></i>
         </a>
 
-        <a class="youtube-tile" href="https://youtu.be/Xpak7izONZc" target="_blank">
-            <img src="assets/No Reason Why.jpg" alt="No Reason Why artwork">
-            <div class="youtube-info">
-                <h3>No Reason Why</h3>
-                <p>Finding strength when life doesn't make sense.</p>
-            </div>
-            <i class="fab fa-youtube"></i>
+        <a class="youtube-tile" href="https://youtu.be/Xpak7izONZc" target="_blank" rel="noopener noreferrer">
+          <img src="assets/No Reason Why.jpg" alt="No Reason Why artwork">
+          <div class="youtube-info">
+            <h3>No Reason Why</h3>
+            <p>Finding strength when life doesn't make sense.</p>
+          </div>
+          <i class="fab fa-youtube"></i>
         </a>
 
-        <a class="youtube-tile" href="https://youtu.be/6OMHon-EdZs" target="_blank">
-            <img src="assets/Thorn.jpg" alt="Thorn In My Soul artwork">
-            <div class="youtube-info">
-                <h3>Thorn In My Soul</h3>
-                <p>Not about forgiveness... about understanding.</p>
-            </div>
-            <i class="fab fa-youtube"></i>
+        <a class="youtube-tile" href="https://youtu.be/RFLa1-l4-mw" target="_blank" rel="noopener noreferrer">
+          <img src="assets/The Sky Never Stays Blue.jpg" alt="The Sky Never Stays Blue artwork">
+          <div class="youtube-info">
+            <h3>The Sky Never Stays Blue</h3>
+            <p>Yesterday's wounds, tomorrow's worries and the exhausting habit of fighting battles that haven't happened yet.</p>
+          </div>
+          <i class="fab fa-youtube"></i>
         </a>
+      </div>
 
-        <a class="youtube-tile" href="#" target="_blank">
-            <img src="assets/backroads-motel.jpg" alt="Backroads Motel artwork">
-            <div class="youtube-info">
-                <h3>Backroads Motel</h3>
-                <p>Coming 29th June 2026.</p>
-            </div>
-            <i class="fab fa-youtube"></i>
-        </a>
+      <a class="btn" href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer">See Everything on YouTube</a>
+    </section>
 
-        <a class="youtube-tile" href="https://youtu.be/RFLa1-l4-mw" target="_blank">
-            <img src="assets/The Sky Never Stays Blue.jpg" alt="The Sky Never Stays Blue artwork">
-            <div class="youtube-info">
-                <h3>The Sky Never Stays Blue</h3>
-                <p>A song about that battle most of us fight daily.
-The constant feeling that something bad is waiting around the corner.
-The habit of carrying yesterday's wounds into today's sunshine.
-The exhaustion of fighting battles that haven't even happened yet.</p>
-            </div>
-            <i class="fab fa-youtube"></i>
-        </a>
-
-    </div>
-
-</section>
+    <section class="section">
+      <div class="merch-callout">
+        <div>
+          <p class="eyebrow">Roadside trading post</p>
+          <h2>Wear the story</h2>
+          <p>BS&amp;B merch is being built around the same world as the music: motel signs, backroads, battered souls and designs that look like they've already lived a little.</p>
+        </div>
+        <a class="btn" href="merch.html">Explore Merch</a>
+      </div>
+    </section>
 
     <section id="contact" class="contact section">
-      <section id="contact" class="contact section">
+      <div class="follow-head">
+        <p class="eyebrow">Follow the backroad</p>
+        <h2>Keep in touch</h2>
+        <p>New songs, new stories and whatever is waiting around the next bend.</p>
+      </div>
 
-    <p class="eyebrow">Follow the Backroad</p>
-    <h2>Find the Music</h2>
-
-    <div class="wooden-sign">
-
-        <a href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" title="YouTube">
-            <i class="fab fa-youtube"></i>
-            <span>YouTube</span>
+      <div class="wooden-sign">
+        <a href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer" title="YouTube">
+          <i class="fab fa-youtube"></i>
+          <span>YouTube</span>
         </a>
 
-        <a href="https://open.spotify.com/artist/42CCatK9gErJbL2eBxH7Or?si=-4bUK13kTzWrhmC_0fzN1g" target="_blank" title="Spotify">
-            <i class="fab fa-spotify"></i>
-            <span>Spotify</span>
+        <a href="https://open.spotify.com/artist/42CCatK9gErJbL2eBxH7Or?si=-4bUK13kTzWrhmC_0fzN1g" target="_blank" rel="noopener noreferrer" title="Spotify">
+          <i class="fab fa-spotify"></i>
+          <span>Spotify</span>
         </a>
 
-        <a href="https://www.instagram.com/broken.souls.and.backroads" target="_blank" title="Instagram">
-            <i class="fab fa-instagram"></i>
-            <span>Instagram</span>
+        <a href="https://www.instagram.com/broken.souls.and.backroads" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
         </a>
 
         <a href="mailto:Brokensoulsandbackroads@gmail.com" title="Email">
-            <i class="fas fa-envelope"></i>
-            <span>Email</span>
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
         </a>
-
-    </div>
-
-</section>
+      </div>
     </section>
   </main>
 
   <footer>© <span id="year"></span> Broken Souls &amp; Backroads</footer>
   <script src="script.js"></script>
-    <div id="music-player" class="music-player">
-  <div class="player-info">
-    <strong>Now Playing</strong>
-    <span id="player-title">Song Title</span>
-  </div>
 
-  <div class="player-video">
-    <iframe
-      id="player-frame"
-      src=""
-      title="YouTube music player"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <div id="music-player" class="music-player">
+    <div class="player-info">
+      <strong>Now Playing</strong>
+      <span id="player-title">Song Title</span>
+    </div>
 
-  <button class="close-player" onclick="closePlayer()">Close</button>
-</div>
+    <div class="player-video">
+      <iframe
+        id="player-frame"
+        src=""
+        title="YouTube music player"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <button class="close-player" onclick="closePlayer()">Close</button>
+  </div>
 </body>
 </html>
