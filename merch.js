@@ -5,7 +5,7 @@ const PRODUCTS = {
     price: "£24.99",
     image: "assets/tee.jpg",
     description: "The everyday BS&B tee. Built for gigs, backroads and the days when surviving is enough.",
-    notes: "Sizes and final garment details will be shown in PayPal checkout once the live product link is connected."
+    notes: "Sourcing in progress. Sizes, garment specification and final stock details will be confirmed before this product goes live."
   },
   hoodie: {
     name: "Backroads Hoodie",
@@ -13,7 +13,7 @@ const PRODUCTS = {
     price: "£44.99",
     image: "assets/hoodie.jpg",
     description: "Heavy roadside comfort with the Broken Souls & Backroads identity front and centre.",
-    notes: "Sizes and final garment details will be shown in PayPal checkout once the live product link is connected."
+    notes: "Sourcing in progress. Sizes, garment specification and final stock details will be confirmed before this product goes live."
   },
   hat: {
     name: "Trucker Hat",
@@ -21,7 +21,7 @@ const PRODUCTS = {
     price: "£19.99",
     image: "assets/hat.jpg",
     description: "A worn-road trucker style cap for the BS&B crowd. Easy, practical and properly roadside.",
-    notes: "Final fit, colour and stock availability will be confirmed before checkout goes live."
+    notes: "Sourcing in progress. Final fit, colour and stock availability will be confirmed before launch."
   },
   mug: {
     name: "Coffee Club Mug",
@@ -29,7 +29,7 @@ const PRODUCTS = {
     price: "£14.99",
     image: "assets/mug.jpg",
     description: "For the first brew of the morning, the late-night writing session and every questionable life decision in between.",
-    notes: "Final capacity and care information will be confirmed before checkout goes live."
+    notes: "Sourcing in progress. Final capacity, finish and care information will be confirmed before launch."
   },
   poster: {
     name: "Motel Poster",
@@ -37,7 +37,7 @@ const PRODUCTS = {
     price: "£12.99",
     image: "assets/poster.jpg",
     description: "A slice of the Backroads Motel world for the wall. Dark country storytelling, printed.",
-    notes: "Final print size and paper specification will be shown before checkout goes live."
+    notes: "Sourcing in progress. Final print size, paper specification and fulfilment method will be confirmed before launch."
   },
   roomKey: {
     name: "Room 11 Key",
@@ -45,7 +45,7 @@ const PRODUCTS = {
     price: "£8.99",
     image: "assets/room-key.jpg",
     description: "A motel-key-style BS&B keepsake inspired by the rooms, stories and ghosts of the Backroads Motel.",
-    notes: "Decorative collectable. Final material and dimensions will be confirmed before checkout goes live."
+    notes: "Sourcing in progress. Decorative collectable. Final material and dimensions will be confirmed before launch."
   }
 };
 
@@ -84,9 +84,9 @@ function configurePayPalButton(button, productKey) {
     button.setAttribute("aria-label", `Buy ${PRODUCTS[productKey].name} securely with PayPal`);
   } else {
     button.classList.add("checkout-pending");
-    button.innerHTML = '<i class="fab fa-paypal"></i> PayPal setup pending';
+    button.innerHTML = '<i class="fas fa-road-barrier"></i> Coming soon';
     button.dataset.checkoutReady = "false";
-    button.setAttribute("aria-label", `PayPal checkout for ${PRODUCTS[productKey].name} is not live yet`);
+    button.setAttribute("aria-label", `${PRODUCTS[productKey].name} is coming soon`);
   }
 }
 
@@ -114,7 +114,7 @@ function openProduct(productKey) {
   configurePayPalButton(dialogPayPal, productKey);
   dialogStatus.textContent = validPayPalUrl(paypalLinks[productKey])
     ? "Checkout opens on PayPal's secure hosted payment page."
-    : "The storefront is ready. A live PayPal Payment Link still needs to be connected for this product.";
+    : "This product is being sourced and is not available to buy yet.";
 
   if (typeof dialog.showModal === "function") {
     dialog.showModal();
@@ -139,7 +139,7 @@ if (dialogPayPal) {
   dialogPayPal.addEventListener("click", () => {
     const key = dialogPayPal.dataset.product;
     if (!openPayPal(key)) {
-      dialogStatus.textContent = "PayPal checkout is not live for this product yet. Add its public PayPal Payment Link in paypal-config.js.";
+      dialogStatus.textContent = "Coming soon. Checkout will only be enabled once the product is sourced, tested and ready to fulfil.";
     }
   });
 }
