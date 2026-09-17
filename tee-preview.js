@@ -46,4 +46,39 @@
       if (note) note.innerHTML = "Supplier confirmed<br>sample pending";
     }
   }
+
+  const mug = PRODUCTS.mug;
+  if (mug) {
+    const mugImage = "assets/bsb-same-roads-mug-preview.jpg";
+
+    mug.name = "Same Roads Two-Tone Mug";
+    mug.price = "£16.99";
+    mug.image = mugImage;
+    mug.description = "11 oz two-tone ceramic BS&B mug with a black inner and handle, wrapped with the Same Roads, Different Stories artwork.";
+    mug.notes = "UK print-on-demand supplier confirmed. Design mockup ready. Sample testing is still pending before launch, so checkout remains disabled until the physical print is approved.";
+
+    const mugButton = document.querySelector('.quick-view[data-product="mug"]');
+    const mugCard = mugButton ? mugButton.closest('.store-card') : null;
+    if (mugCard) {
+      const wrap = mugCard.querySelector('.product-image-wrap');
+      const img = wrap ? wrap.querySelector('img') : null;
+      const badge = wrap ? wrap.querySelector('.product-badge') : null;
+      const title = mugCard.querySelector('.product-body h3');
+      const copy = mugCard.querySelector('.product-copy');
+      const price = mugCard.querySelector('.product-price');
+      const note = mugCard.querySelector('.product-option-note');
+
+      if (img) {
+        img.src = mugImage;
+        img.alt = "Same Roads Two-Tone Mug mockup";
+        img.style.objectFit = "contain";
+        img.style.background = "#fff";
+      }
+      if (badge) badge.textContent = "Two-Tone • 11 oz";
+      if (title) title.textContent = mug.name;
+      if (copy) copy.textContent = "Black-inner, black-handle ceramic mug with the Same Roads, Different Stories wraparound artwork.";
+      if (price) price.textContent = mug.price;
+      if (note) note.innerHTML = "Supplier confirmed<br>sample pending";
+    }
+  }
 })();
