@@ -1,0 +1,517 @@
+/* Broken Souls & Backroads — Roadside Trading Post */
+
+.merch-page{
+  overflow-x:hidden;
+}
+
+.merch-store-hero{
+  min-height:68vh;
+  position:relative;
+  isolation:isolate;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:96px 20px 82px;
+  background:
+    linear-gradient(to bottom,rgba(0,0,0,.18),rgba(8,6,4,.88)),
+    url('assets/merch-hero.jpg') center/cover;
+}
+
+.merch-store-hero::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:auto 0 0;
+  height:160px;
+  background:linear-gradient(to bottom,transparent,var(--bg));
+}
+
+.merch-store-hero .hero-card{
+  width:min(1000px,94vw);
+  padding:clamp(30px,5vw,54px);
+  border-color:rgba(216,155,76,.55);
+  backdrop-filter:blur(4px);
+}
+
+.merch-store-hero h1{
+  font-size:clamp(3.4rem,9vw,7rem);
+}
+
+.store-intro{
+  max-width:720px;
+  margin:18px auto 0;
+  color:#e5cfad;
+  line-height:1.75;
+}
+
+.store-actions{
+  margin-top:24px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.trust-strip{
+  position:relative;
+  z-index:2;
+  max-width:1120px;
+  margin:-34px auto 0;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+  min-height:82px;
+  padding:16px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  background:#130c08;
+  border:1px solid var(--line);
+  color:#dbc6a5;
+  text-align:left;
+}
+
+.trust-item + .trust-item{border-left:0}
+.trust-item i{font-size:1.25rem;color:var(--gold)}
+.trust-item strong{display:block;color:var(--cream);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+.trust-item span{display:block;margin-top:3px;color:var(--muted);font-size:.76rem}
+
+.shop-shell{
+  max-width:1280px;
+  margin:0 auto;
+  padding:92px 6vw 72px;
+}
+
+.shop-heading{
+  max-width:780px;
+  margin:0 auto 38px;
+  text-align:center;
+}
+
+.shop-heading p:last-child{
+  color:var(--muted);
+  line-height:1.75;
+}
+
+.shop-heading h2{
+  font-family:Rye,serif;
+  text-transform:uppercase;
+  font-size:clamp(2.2rem,5vw,4.2rem);
+  letter-spacing:.05em;
+}
+
+.shop-toolbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  padding:16px 0 26px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:28px;
+}
+
+.filter-row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.filter-btn{
+  margin:0;
+  padding:9px 13px;
+  border:1px solid var(--line);
+  background:#120b07;
+  box-shadow:none;
+  color:var(--muted);
+  font-size:.7rem;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  color:var(--cream);
+  border-color:var(--gold);
+  background:#2a180d;
+  transform:none;
+}
+
+.shop-note{
+  color:var(--muted);
+  font-size:.78rem;
+}
+
+.store-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+
+.store-card{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  background:linear-gradient(145deg,#24150d,#0c0805);
+  border:1px solid rgba(216,155,76,.45);
+  box-shadow:0 25px 65px rgba(0,0,0,.32);
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;
+}
+
+.store-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(216,155,76,.82);
+  box-shadow:0 34px 80px rgba(0,0,0,.48),0 0 28px rgba(216,155,76,.08);
+}
+
+.product-image-wrap{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#0a0705;
+}
+
+.product-image-wrap img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .5s ease;
+}
+
+.store-card:hover .product-image-wrap img{transform:scale(1.035)}
+
+.product-badge{
+  position:absolute;
+  top:14px;
+  left:14px;
+  z-index:1;
+  padding:7px 9px;
+  border:1px solid rgba(216,155,76,.62);
+  background:rgba(8,6,4,.84);
+  color:#edc887;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.64rem;
+  font-weight:900;
+}
+
+.product-body{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:21px;
+}
+
+.product-type{
+  margin:0 0 7px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.67rem;
+  font-weight:900;
+}
+
+.product-body h3{
+  font-family:Rye,serif;
+  color:var(--cream);
+  text-transform:uppercase;
+  font-size:1.38rem;
+  line-height:1.25;
+}
+
+.product-copy{
+  flex:1;
+  margin:11px 0 16px;
+  color:var(--muted);
+  line-height:1.6;
+  font-size:.91rem;
+}
+
+.product-meta{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:12px;
+  margin:3px 0 15px;
+}
+
+.product-price{
+  font-family:Special Elite,cursive;
+  color:#f2c77f;
+  font-size:1.42rem;
+}
+
+.product-option-note{
+  color:#a98d69;
+  font-size:.7rem;
+  text-align:right;
+}
+
+.product-actions{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+}
+
+.product-actions .btn,
+.product-actions button{
+  margin:0;
+  width:100%;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.quick-view{
+  min-width:48px;
+  padding:0 14px;
+  background:rgba(0,0,0,.28);
+  box-shadow:none;
+}
+
+.paypal-buy{
+  background:#ffc439;
+  border-color:#ffc439;
+  color:#142c8e;
+  text-shadow:none;
+  box-shadow:0 0 16px rgba(255,196,57,.16);
+}
+
+.paypal-buy:hover{
+  filter:brightness(1.04);
+}
+
+.paypal-buy i{
+  margin-right:8px;
+  font-size:1.05rem;
+}
+
+.paypal-buy.checkout-pending{
+  background:#3b2c1d;
+  color:#d6bd99;
+  border-color:var(--line);
+  box-shadow:none;
+}
+
+.store-card[hidden]{display:none}
+
+.paypal-panel{
+  max-width:1120px;
+  margin:72px auto 0;
+  padding:36px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:24px;
+  align-items:center;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(255,196,57,.12),transparent 30%),
+    linear-gradient(145deg,#21140c,#0b0705);
+  border:1px solid rgba(216,155,76,.5);
+}
+
+.paypal-mark{
+  width:78px;
+  height:78px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#ffc439;
+  color:#142c8e;
+  font-size:2rem;
+  box-shadow:0 12px 35px rgba(0,0,0,.35);
+}
+
+.paypal-panel h3{
+  font-family:Rye,serif;
+  text-transform:uppercase;
+  color:var(--cream);
+  font-size:1.7rem;
+}
+
+.paypal-panel p{
+  margin:8px 0 0;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.paypal-panel small{
+  display:block;
+  color:#a88c68;
+  margin-top:8px;
+}
+
+.service-grid{
+  max-width:1120px;
+  margin:0 auto;
+  padding:28px 6vw 80px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.service-card{
+  padding:26px;
+  background:#100a07;
+  border:1px solid var(--line);
+}
+
+.service-card i{
+  color:var(--gold);
+  font-size:1.5rem;
+  margin-bottom:14px;
+}
+
+.service-card h3{
+  color:var(--cream);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:1rem;
+}
+
+.service-card p{
+  color:var(--muted);
+  line-height:1.65;
+  margin-bottom:0;
+  font-size:.9rem;
+}
+
+.store-footer-links{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.store-footer-links a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:.78rem;
+}
+
+.store-footer-links a:hover{color:var(--gold)}
+
+.product-dialog{
+  width:min(760px,94vw);
+  max-height:90vh;
+  padding:0;
+  color:var(--cream);
+  background:#100a07;
+  border:1px solid rgba(216,155,76,.65);
+  box-shadow:0 30px 100px rgba(0,0,0,.72);
+}
+
+.product-dialog::backdrop{
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(5px);
+}
+
+.dialog-close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  z-index:2;
+  width:42px;
+  height:42px;
+  margin:0;
+  padding:0;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:rgba(8,6,4,.88);
+  box-shadow:none;
+}
+
+.dialog-grid{
+  display:grid;
+  grid-template-columns:minmax(220px,.9fr) 1.1fr;
+}
+
+.dialog-image{
+  min-height:100%;
+  background:#090604;
+}
+
+.dialog-image img{
+  width:100%;
+  height:100%;
+  min-height:430px;
+  object-fit:cover;
+  display:block;
+}
+
+.dialog-copy{
+  padding:44px 32px 32px;
+}
+
+.dialog-copy h2{
+  font-family:Rye,serif;
+  text-transform:uppercase;
+  color:var(--cream);
+  font-size:clamp(1.7rem,4vw,2.6rem);
+}
+
+.dialog-description{
+  color:var(--muted);
+  line-height:1.75;
+}
+
+.dialog-price{
+  color:#f2c77f;
+  font-family:Special Elite,cursive;
+  font-size:1.6rem;
+  margin:18px 0;
+}
+
+.dialog-notes{
+  margin:18px 0 24px;
+  padding:15px 16px;
+  background:#1a100a;
+  border-left:3px solid var(--gold);
+  color:#d5bd9b;
+  line-height:1.55;
+  font-size:.86rem;
+}
+
+.dialog-paypal{
+  width:100%;
+  margin:0;
+}
+
+.checkout-status{
+  margin-top:12px;
+  color:#a98d69;
+  font-size:.75rem;
+  line-height:1.5;
+}
+
+@media(max-width:980px){
+  .trust-strip{grid-template-columns:repeat(2,1fr)}
+  .trust-item + .trust-item{border-left:1px solid var(--line)}
+  .trust-item:nth-child(even){border-left:0}
+  .store-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .paypal-panel{grid-template-columns:auto 1fr}
+  .paypal-panel .paypal-action{grid-column:1/-1}
+  .service-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:680px){
+  .merch-store-hero{min-height:60vh;padding-top:78px}
+  .trust-strip{grid-template-columns:1fr;margin-top:0;padding:0}
+  .trust-item,.trust-item + .trust-item,.trust-item:nth-child(even){border-left:0;border-right:0;border-top:0}
+  .shop-shell{padding-top:64px}
+  .store-grid{grid-template-columns:1fr}
+  .shop-toolbar{align-items:flex-start}
+  .store-card{max-width:520px;margin:0 auto;width:100%}
+  .paypal-panel{grid-template-columns:1fr;text-align:center;padding:26px}
+  .paypal-mark{margin:0 auto}
+  .dialog-grid{grid-template-columns:1fr}
+  .dialog-image img{min-height:260px;max-height:330px}
+  .dialog-copy{padding:30px 22px 24px}
+}

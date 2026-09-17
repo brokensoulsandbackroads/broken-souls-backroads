@@ -3,50 +3,265 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Merch | Broken Souls & Backroads</title>
-  <meta name="description" content="Broken Souls & Backroads merchandise concepts and upcoming products.">
+  <title>Roadside Trading Post | Broken Souls & Backroads Merch</title>
+  <meta name="description" content="Shop Broken Souls & Backroads merchandise from the Roadside Trading Post. Apparel, Backroads Motel collectables, prints and more with PayPal-hosted checkout.">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="merch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body>
+<body class="merch-page">
   <header class="site-header">
     <a class="brand" href="index.html">Broken Souls <span>&amp; Backroads</span></a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="index.html#music">Music</a>
-      <a href="index.html#motel">YouTube</a>
-      <a href="merch.html">Merch</a>
+      <a href="index.html#start">Music</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#youtube">YouTube</a>
+      <a href="merch.html" aria-current="page">Merch</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero merch-hero">
+  <section class="merch-store-hero">
     <div class="hero-card">
-      <p class="eyebrow">Roadside trading post</p>
-      <h1>Merch</h1>
-      <p class="tagline">A first look at Broken Souls &amp; Backroads merchandise.</p>
+      <p class="eyebrow">Broken Souls &amp; Backroads</p>
+      <h1>Roadside<br><span>Trading Post</span></h1>
+      <p class="tagline">Wear the story. Carry a piece of the road.</p>
+      <p class="store-intro">
+        Merch built around the songs, motel rooms and battered-road stories of BS&amp;B.
+        Browse the first collection below, then check out securely through PayPal when each product goes live.
+      </p>
+      <div class="store-actions">
+        <a class="btn" href="#shop">Shop the collection</a>
+        <a class="btn ghost" href="#paypal">How checkout works</a>
+      </div>
     </div>
   </section>
 
+  <div class="trust-strip" aria-label="Store information">
+    <div class="trust-item">
+      <i class="fab fa-paypal" aria-hidden="true"></i>
+      <div><strong>PayPal checkout</strong><span>Payment handled by PayPal</span></div>
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-shield-halved" aria-hidden="true"></i>
+      <div><strong>Buyer safeguards</strong><span>Eligible purchases may qualify</span></div>
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-box" aria-hidden="true"></i>
+      <div><strong>Tracked fulfilment</strong><span>Shipping details kept with orders</span></div>
+    </div>
+    <div class="trust-item">
+      <i class="fas fa-road" aria-hidden="true"></i>
+      <div><strong>Independent</strong><span>BS&amp;B direct from the backroad</span></div>
+    </div>
+  </div>
+
   <main>
-    <section class="section shop">
-      <div class="section-head">
-        <p class="eyebrow">In development</p>
-        <h2>Wear the story</h2>
-        <p>These are early product concepts while the full BS&amp;B shop is being built. Prices and final designs may change before launch.</p>
+    <section id="shop" class="shop-shell">
+      <div class="shop-heading">
+        <p class="eyebrow">The first collection</p>
+        <h2>Pick your roadside relic</h2>
+        <p>
+          The storefront is being prepared for live PayPal sales. Product designs and prices below are the current launch range;
+          final size, stock and shipping choices will be confirmed in the PayPal product checkout.
+        </p>
       </div>
 
-      <div class="products">
-        <article><img src="assets/tee.jpg" alt="Broken Souls tee"><h3>Broken Souls Tee</h3><p>£24.99</p><button type="button">Preview Product</button></article>
-        <article><img src="assets/hoodie.jpg" alt="Backroads hoodie"><h3>Backroads Hoodie</h3><p>£44.99</p><button type="button">Preview Product</button></article>
-        <article><img src="assets/hat.jpg" alt="Trucker hat"><h3>Trucker Hat</h3><p>£19.99</p><button type="button">Preview Product</button></article>
-        <article><img src="assets/mug.jpg" alt="Coffee Club mug"><h3>Coffee Club Mug</h3><p>£14.99</p><button type="button">Preview Product</button></article>
-        <article><img src="assets/poster.jpg" alt="Backroads Motel poster"><h3>Motel Poster</h3><p>£12.99</p><button type="button">Preview Product</button></article>
-        <article><img src="assets/room-key.jpg" alt="Room 11 motel key"><h3>Room 11 Key</h3><p>£8.99</p><button type="button">Preview Product</button></article>
+      <div class="shop-toolbar">
+        <div class="filter-row" aria-label="Product filters">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="apparel">Apparel</button>
+          <button class="filter-btn" type="button" data-filter="collectables">Collectables</button>
+          <button class="filter-btn" type="button" data-filter="home">Home &amp; Road</button>
+        </div>
+        <div class="shop-note"><i class="fab fa-paypal" aria-hidden="true"></i> PayPal-hosted checkout</div>
       </div>
+
+      <div class="store-grid">
+        <article class="store-card" data-category="apparel">
+          <div class="product-image-wrap">
+            <span class="product-badge">BS&amp;B Essential</span>
+            <img src="assets/tee.jpg" alt="Broken Souls & Backroads tee">
+          </div>
+          <div class="product-body">
+            <p class="product-type">Apparel</p>
+            <h3>Broken Souls Tee</h3>
+            <p class="product-copy">The everyday BS&amp;B tee. Built for gigs, backroads and the days when surviving is enough.</p>
+            <div class="product-meta">
+              <span class="product-price">£24.99</span>
+              <span class="product-option-note">Sizes configured<br>in PayPal</span>
+            </div>
+            <div class="product-actions">
+              <button class="paypal-buy" type="button" data-product="tee"><i class="fab fa-paypal"></i> PayPal setup pending</button>
+              <button class="quick-view" type="button" data-product="tee" aria-label="View Broken Souls Tee details"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="store-card" data-category="apparel">
+          <div class="product-image-wrap">
+            <span class="product-badge">Cold Road</span>
+            <img src="assets/hoodie.jpg" alt="Broken Souls & Backroads hoodie">
+          </div>
+          <div class="product-body">
+            <p class="product-type">Apparel</p>
+            <h3>Backroads Hoodie</h3>
+            <p class="product-copy">Heavy roadside comfort with the Broken Souls &amp; Backroads identity front and centre.</p>
+            <div class="product-meta">
+              <span class="product-price">£44.99</span>
+              <span class="product-option-note">Sizes configured<br>in PayPal</span>
+            </div>
+            <div class="product-actions">
+              <button class="paypal-buy" type="button" data-product="hoodie"><i class="fab fa-paypal"></i> PayPal setup pending</button>
+              <button class="quick-view" type="button" data-product="hoodie" aria-label="View Backroads Hoodie details"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="store-card" data-category="apparel">
+          <div class="product-image-wrap">
+            <span class="product-badge">Road Gear</span>
+            <img src="assets/hat.jpg" alt="Broken Souls & Backroads trucker hat">
+          </div>
+          <div class="product-body">
+            <p class="product-type">Headwear</p>
+            <h3>Trucker Hat</h3>
+            <p class="product-copy">A worn-road trucker style cap for the BS&amp;B crowd. Easy, practical and properly roadside.</p>
+            <div class="product-meta">
+              <span class="product-price">£19.99</span>
+              <span class="product-option-note">Final fit &amp; colour<br>before launch</span>
+            </div>
+            <div class="product-actions">
+              <button class="paypal-buy" type="button" data-product="hat"><i class="fab fa-paypal"></i> PayPal setup pending</button>
+              <button class="quick-view" type="button" data-product="hat" aria-label="View Trucker Hat details"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="store-card" data-category="home">
+          <div class="product-image-wrap">
+            <span class="product-badge">Morning Fuel</span>
+            <img src="assets/mug.jpg" alt="Broken Souls & Backroads Coffee Club mug">
+          </div>
+          <div class="product-body">
+            <p class="product-type">Home &amp; Road</p>
+            <h3>Coffee Club Mug</h3>
+            <p class="product-copy">For the first brew, the late-night writing session and every questionable life decision in between.</p>
+            <div class="product-meta">
+              <span class="product-price">£14.99</span>
+              <span class="product-option-note">Final specification<br>before launch</span>
+            </div>
+            <div class="product-actions">
+              <button class="paypal-buy" type="button" data-product="mug"><i class="fab fa-paypal"></i> PayPal setup pending</button>
+              <button class="quick-view" type="button" data-product="mug" aria-label="View Coffee Club Mug details"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="store-card" data-category="collectables">
+          <div class="product-image-wrap">
+            <span class="product-badge">Backroads Motel</span>
+            <img src="assets/poster.jpg" alt="Backroads Motel poster">
+          </div>
+          <div class="product-body">
+            <p class="product-type">Prints</p>
+            <h3>Motel Poster</h3>
+            <p class="product-copy">A slice of the Backroads Motel world for the wall. Dark country storytelling, printed.</p>
+            <div class="product-meta">
+              <span class="product-price">£12.99</span>
+              <span class="product-option-note">Final print size<br>before launch</span>
+            </div>
+            <div class="product-actions">
+              <button class="paypal-buy" type="button" data-product="poster"><i class="fab fa-paypal"></i> PayPal setup pending</button>
+              <button class="quick-view" type="button" data-product="poster" aria-label="View Motel Poster details"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="store-card" data-category="collectables">
+          <div class="product-image-wrap">
+            <span class="product-badge">Room 11</span>
+            <img src="assets/room-key.jpg" alt="Room 11 motel key collectable">
+          </div>
+          <div class="product-body">
+            <p class="product-type">Collectables</p>
+            <h3>Room 11 Key</h3>
+            <p class="product-copy">A motel-key-style keepsake inspired by the rooms, stories and ghosts of the Backroads Motel.</p>
+            <div class="product-meta">
+              <span class="product-price">£8.99</span>
+              <span class="product-option-note">Decorative<br>collectable</span>
+            </div>
+            <div class="product-actions">
+              <button class="paypal-buy" type="button" data-product="roomKey"><i class="fab fa-paypal"></i> PayPal setup pending</button>
+              <button class="quick-view" type="button" data-product="roomKey" aria-label="View Room 11 Key details"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <section id="paypal" class="paypal-panel" aria-labelledby="paypal-title">
+        <div class="paypal-mark"><i class="fab fa-paypal" aria-hidden="true"></i></div>
+        <div>
+          <h3 id="paypal-title">Checkout stays with PayPal</h3>
+          <p>
+            BS&amp;B shows the merchandise; PayPal handles the sensitive payment step on its hosted checkout.
+            Each live product can include its own variants, quantity, shipping and confirmation settings inside PayPal.
+          </p>
+          <small>Never send card details, passwords or PayPal credentials to BS&amp;B by email or message.</small>
+        </div>
+        <div class="paypal-action">
+          <a class="btn ghost" href="https://www.paypal.com/uk/webapps/mpp/paypal-safety-and-security" target="_blank" rel="noopener noreferrer">PayPal security</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="service-grid" aria-label="Shopping information">
+      <article class="service-card">
+        <i class="fas fa-truck-fast" aria-hidden="true"></i>
+        <h3>Delivery</h3>
+        <p>Delivery destinations, charges and fulfilment times will be displayed clearly before the store is switched to live sales.</p>
+      </article>
+      <article class="service-card">
+        <i class="fas fa-rotate-left" aria-hidden="true"></i>
+        <h3>Returns</h3>
+        <p>A full returns and cancellation policy will be published before checkout is enabled, including any exclusions for personalised goods.</p>
+      </article>
+      <article class="service-card">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <h3>Need a hand?</h3>
+        <p>Questions about a product or an order? Contact BS&amp;B before buying and we'll make sure you know exactly what you're ordering.</p>
+      </article>
     </section>
   </main>
 
-  <footer>© <span id="year"></span> Broken Souls &amp; Backroads</footer>
+  <footer>
+    <div class="store-footer-links">
+      <a href="index.html#contact">Contact</a>
+      <a href="#paypal">Payment information</a>
+      <a href="#shop">Back to products</a>
+    </div>
+    © <span id="year"></span> Broken Souls &amp; Backroads
+  </footer>
+
+  <dialog id="product-dialog" class="product-dialog">
+    <button id="dialog-close" class="dialog-close" type="button" aria-label="Close product details"><i class="fas fa-xmark"></i></button>
+    <div class="dialog-grid">
+      <div class="dialog-image"><img id="dialog-image" src="" alt=""></div>
+      <div class="dialog-copy">
+        <p id="dialog-type" class="eyebrow"></p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description" class="dialog-description"></p>
+        <div id="dialog-price" class="dialog-price"></div>
+        <div id="dialog-notes" class="dialog-notes"></div>
+        <button id="dialog-paypal" class="paypal-buy dialog-paypal" type="button"><i class="fab fa-paypal"></i> PayPal setup pending</button>
+        <p id="dialog-status" class="checkout-status"></p>
+      </div>
+    </div>
+  </dialog>
+
   <script src="script.js"></script>
+  <script src="paypal-config.js"></script>
+  <script src="merch.js"></script>
 </body>
 </html>
