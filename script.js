@@ -6,9 +6,7 @@ function playSong(videoId, title){
   const titleBox = document.getElementById("player-title");
 
   titleBox.textContent = title;
-
   frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
-
   player.classList.add("open");
 }
 
@@ -19,3 +17,11 @@ function closePlayer(){
   player.classList.remove("open");
   frame.src = "";
 }
+
+window.addEventListener("load", () => {
+  if (document.body.classList.contains("merch-page")) {
+    const teePreview = document.createElement("script");
+    teePreview.src = "tee-preview.js";
+    document.body.appendChild(teePreview);
+  }
+});
