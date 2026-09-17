@@ -1,32 +1,49 @@
 (function(){
-  if (typeof PRODUCTS === "undefined" || !PRODUCTS.tee) return;
+  if (typeof PRODUCTS === "undefined") return;
 
-  const teeImage = "assets/bsb-same-roads-tee-preview.jpg";
+  const tee = PRODUCTS.tee;
+  if (tee) {
+    const teeImage = "assets/bsb-same-roads-tee-preview.jpg";
 
-  PRODUCTS.tee.name = "Same Roads, Different Stories Tee";
-  PRODUCTS.tee.image = teeImage;
-  PRODUCTS.tee.description = "Unisex heather-grey BS&B graphic tee with the Same Roads, Different Stories artwork printed large on the front.";
-  PRODUCTS.tee.notes = "Design mockup ready. Sourcing and sample testing are still in progress. Final garment, available sizes, print quality, delivery cost and retail price will be confirmed before checkout goes live.";
+    tee.name = "Same Roads, Different Stories Tee";
+    tee.image = teeImage;
+    tee.description = "Unisex heather-grey BS&B graphic tee with the Same Roads, Different Stories artwork printed large on the front.";
+    tee.notes = "UK print-on-demand supplier confirmed. Sample testing is still pending before launch. Final sizes, print quality and live checkout will be confirmed once the sample is approved.";
 
-  const button = document.querySelector('.quick-view[data-product="tee"]');
-  const card = button ? button.closest('.store-card') : null;
-  if (!card) return;
+    const button = document.querySelector('.quick-view[data-product="tee"]');
+    const card = button ? button.closest('.store-card') : null;
+    if (card) {
+      const wrap = card.querySelector('.product-image-wrap');
+      const img = wrap ? wrap.querySelector('img') : null;
+      const badge = wrap ? wrap.querySelector('.product-badge') : null;
+      const title = card.querySelector('.product-body h3');
+      const copy = card.querySelector('.product-copy');
+      const note = card.querySelector('.product-option-note');
 
-  const wrap = card.querySelector('.product-image-wrap');
-  const img = wrap ? wrap.querySelector('img') : null;
-  const badge = wrap ? wrap.querySelector('.product-badge') : null;
-  const title = card.querySelector('.product-body h3');
-  const copy = card.querySelector('.product-copy');
-  const note = card.querySelector('.product-option-note');
-
-  if (img) {
-    img.src = teeImage;
-    img.alt = "Same Roads, Different Stories unisex T-shirt mockup";
-    img.style.objectFit = "contain";
-    img.style.background = "#fff";
+      if (img) {
+        img.src = teeImage;
+        img.alt = "Same Roads, Different Stories unisex T-shirt mockup";
+        img.style.objectFit = "contain";
+        img.style.background = "#fff";
+      }
+      if (badge) badge.textContent = "UK POD Confirmed";
+      if (title) title.textContent = tee.name;
+      if (copy) copy.textContent = "Unisex heather-grey tee with the Same Roads, Different Stories artwork printed large on the front.";
+      if (note) note.innerHTML = "Supplier confirmed<br>sample pending";
+    }
   }
-  if (badge) badge.textContent = "New Design";
-  if (title) title.textContent = PRODUCTS.tee.name;
-  if (copy) copy.textContent = "Unisex heather-grey tee with the Same Roads, Different Stories artwork printed large on the front.";
-  if (note) note.innerHTML = "Sample & sourcing<br>in progress";
+
+  const hoodie = PRODUCTS.hoodie;
+  if (hoodie) {
+    hoodie.notes = "UK print-on-demand supplier confirmed for a 300gsm heavy hoodie with front and back DTG printing. Sample testing is still pending before launch. Final print quality, sizes and live checkout will be confirmed once the sample is approved.";
+
+    const hoodieButton = document.querySelector('.quick-view[data-product="hoodie"]');
+    const hoodieCard = hoodieButton ? hoodieButton.closest('.store-card') : null;
+    if (hoodieCard) {
+      const badge = hoodieCard.querySelector('.product-badge');
+      const note = hoodieCard.querySelector('.product-option-note');
+      if (badge) badge.textContent = "UK POD Confirmed";
+      if (note) note.innerHTML = "Supplier confirmed<br>sample pending";
+    }
+  }
 })();
