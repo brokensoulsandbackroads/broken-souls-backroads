@@ -3,93 +3,136 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Broken Souls & Backroads</title>
-    <meta name="description" content="Broken Souls & Backroads, country music for people who've survived something.">
+    <title>Broken Souls & Backroads | Country Music From The Hard Shoulder</title>
+    <meta name="description" content="Broken Souls & Backroads. Country storytelling for people who've survived something. Listen to the music, follow the stories and explore the road ahead.">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">Broken Souls <span>&amp; Backroads</span></a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="#music">Music</a>
-      <a href="#motel">YouTube</a>
+      <a href="#start">Music</a>
+      <a href="#about">About</a>
+      <a href="#youtube">YouTube</a>
       <a href="merch.html">Merch</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero home-hero">
     <div class="hero-card">
-      <p class="eyebrow">Official artist site</p>
+      <p class="hero-kicker">Independent country • stories from the hard shoulder</p>
       <h1>Broken Souls<br><span>&amp; Backroads</span></h1>
       <p class="tagline">Country music for people who've survived something.</p>
-      <div class="actions">
-        <a class="btn" href="#music">Listen Now</a>
-        <a class="btn ghost" href="merch.html">View Merch</a>
+      <p class="hero-intro">
+        Songs about the roads that leave marks: family, grief, recovery, overthinking,
+        bad days, second chances and the occasional laugh when life gets ridiculous.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#start">Start Listening</a>
+        <a class="btn ghost" href="https://open.spotify.com/artist/42CCatK9gErJbL2eBxH7Or?si=-4bUK13kTzWrhmC_0fzN1g" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a class="btn ghost" href="merch.html">Roadside Merch</a>
+      </div>
+
+      <div class="hero-socials" aria-label="Broken Souls and Backroads social links">
+        <a href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="https://www.instagram.com/broken.souls.and.backroads" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
       </div>
     </div>
   </section>
 
+  <div class="road-strip" aria-label="Broken Souls and Backroads themes">
+    <span>Country storytelling</span>
+    <span>Hard-won hope</span>
+    <span>Dark humour</span>
+    <span>Real-life scars</span>
+  </div>
+
   <main>
-    <section id="music" class="section">
+    <section id="start" class="section start-here">
       <div class="section-head">
-        <p class="eyebrow">Featured release</p>
-        <h2>Music from the hard shoulder</h2>
+        <p class="eyebrow">New here?</p>
+        <h2>Pick a road</h2>
+        <p class="section-copy">Three songs, three different corners of Broken Souls &amp; Backroads. Start with the one that sounds most like today.</p>
       </div>
 
-      <article class="feature">
-        <img src="assets/backroads-motel.jpg" alt="Backroads Motel artwork">
-        <div>
-          <p class="eyebrow">Out now</p>
-          <h3>Backroads Motel Saga Part 1</h3>
-          <p>Some rooms hold secrets. Some hold ghosts. Some leave the porch light on for anyone who needs shelter from the storm.</p>
-          <a class="btn small" href="https://ditto.fm/the-backroads-motel"
-             target="_blank"
-             rel="noopener noreferrer">Listen now</a>
-          <a class="btn small ghost" href="https://www.youtube.com/@BrokenSoulsAndBackroads"
-             target="_blank"
-             rel="noopener noreferrer">Visit YouTube</a>
-        </div>
-      </article>
-
-      <div class="cards">
-        <article>
+      <div class="start-grid">
+        <article class="start-card">
           <img src="assets/angel-in-the-room.jpg" alt="Angel In The Room artwork">
-          <a href="#" onclick="playSong('EvVSE1tXBiA', 'Angel In The Room'); return false;">
+          <div class="start-card-content">
+            <p class="eyebrow">For the quiet battles</p>
             <h3>Angel In The Room</h3>
-          </a>
-          <p>A song about love without words.</p>
+            <p>A song about love without words.</p>
+            <a class="play-link" href="#" onclick="playSong('EvVSE1tXBiA', 'Angel In The Room'); return false;"><i class="fas fa-play"></i> Play song</a>
+          </div>
         </article>
-        <article>
+
+        <article class="start-card">
           <img src="assets/carousel.jpg" alt="Carousel Built By A Lunatic artwork">
-          <a href="#" onclick="playSong('EsFNAKDNeLs', 'Carousel Built By A Lunatic'); return false;">
+          <div class="start-card-content">
+            <p class="eyebrow">For the noisy mind</p>
             <h3>Carousel Built By A Lunatic</h3>
-          </a>
-          <p>Heavy country chaos for racing thoughts.</p>
+            <p>Heavy country chaos for racing thoughts.</p>
+            <a class="play-link" href="#" onclick="playSong('EsFNAKDNeLs', 'Carousel Built By A Lunatic'); return false;"><i class="fas fa-play"></i> Play song</a>
+          </div>
         </article>
-        <article>
-          <img src="assets/Thorn.jpg" alt="Thorn artwork">
-          <a href="#" onclick="playSong('6OMHon-EdZs', 'Thorn in my Soul'); return false;">
-            <h3>Thorn in my Soul</h3>
-          </a>
-          <p>A song not about forgiveness, but understanding.</p>
+
+        <article class="start-card">
+          <img src="assets/Thorn.jpg" alt="Thorn In My Soul artwork">
+          <div class="start-card-content">
+            <p class="eyebrow">For the old wounds</p>
+            <h3>Thorn In My Soul</h3>
+            <p>Not about forgiveness. About understanding.</p>
+            <a class="play-link" href="#" onclick="playSong('6OMHon-EdZs', 'Thorn In My Soul'); return false;"><i class="fas fa-play"></i> Play song</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="motel" class="motel section">
-      <p class="eyebrow">Just a few releases on YouTube</p>
-      <h2>Please Like &amp; Subscribe!</h2>
+    <section id="music" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Featured release</p>
+        <h2>The motel doors are open</h2>
+        <p class="section-copy">Seven rooms. Seven stories. One battered roadside motel where every door has something behind it.</p>
+      </div>
 
-      <p>
-        You'll find everything from heartfelt ballads and storytelling country songs
-        to the occasional humorous track inspired by everyday life.
-      </p>
+      <article class="feature feature-release">
+        <img src="assets/backroads-motel.jpg" alt="Backroads Motel Saga Part 1 artwork">
+        <div class="feature-copy">
+          <p class="eyebrow">Out now</p>
+          <h3>Backroads Motel Saga Part 1</h3>
+          <p>Some rooms hold secrets. Some hold ghosts. Some leave the porch light on for anyone who needs shelter from the storm.</p>
+          <p>The Backroads Motel is storytelling country built one room at a time, with every track opening another door into somebody else's night.</p>
+          <a class="btn small" href="https://open.spotify.com/artist/42CCatK9gErJbL2eBxH7Or?si=-4bUK13kTzWrhmC_0fzN1g" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+          <a class="btn small ghost" href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer">Listen on YouTube</a>
+          <span class="release-note">Pull in. Pick a room. Stay awhile.</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="section manifesto">
+      <div class="manifesto-card">
+        <div class="manifesto-mark">Music from<br>the hard<br>shoulder.</div>
+        <div class="manifesto-copy">
+          <p class="eyebrow">What is Broken Souls &amp; Backroads?</p>
+          <p><strong>Not polished Nashville sunshine.</strong> Broken Souls &amp; Backroads lives where country storytelling meets the bits of life people usually leave out of the photograph.</p>
+          <p>The songs move through family, grief, recovery, anxiety, love, bad decisions, second chances and the strange humour that sometimes turns up when everything else has gone sideways.</p>
+          <p>Some tracks whisper. Some kick the door in. They all come from the same place: <strong>real stories deserve a soundtrack too.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="youtube" class="motel section">
+      <div class="section-head">
+        <p class="eyebrow">Down another backroad</p>
+        <h2>Watch &amp; listen on YouTube</h2>
+        <p class="section-copy">Heartfelt country, family stories, darker roads and the occasional song that refuses to behave itself.</p>
+      </div>
 
       <div class="youtube-grid">
         <a class="youtube-tile" href="https://youtu.be/duFb8F3EG50" target="_blank" rel="noopener noreferrer">
@@ -105,7 +148,7 @@
           <img src="assets/I See It In Your Eyes.jpg" alt="I See It In Your Eyes artwork">
           <div class="youtube-info">
             <h3>I See It In Your Eyes</h3>
-            <p>This track was written from a father's perspective, watching his daughter struggle with thoughts, emotions, and challenges that are often hidden behind a smile. It's about those quiet moments when the world goes silent and the people who love you can see the weight you're carrying, even when no words are spoken.</p>
+            <p>A father's perspective on seeing the weight somebody carries, even when they never say it out loud.</p>
           </div>
           <i class="fab fa-youtube"></i>
         </a>
@@ -119,38 +162,36 @@
           <i class="fab fa-youtube"></i>
         </a>
 
-        <a class="youtube-tile" href="https://youtu.be/6OMHon-EdZs" target="_blank" rel="noopener noreferrer">
-          <img src="assets/Thorn.jpg" alt="Thorn In My Soul artwork">
-          <div class="youtube-info">
-            <h3>Thorn In My Soul</h3>
-            <p>Not about forgiveness... about understanding.</p>
-          </div>
-          <i class="fab fa-youtube"></i>
-        </a>
-
-        <a class="youtube-tile" href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer">
-          <img src="assets/backroads-motel.jpg" alt="Backroads Motel artwork">
-          <div class="youtube-info">
-            <h3>Backroads Motel</h3>
-            <p>Backroads Motel Saga Part 1 is out now.</p>
-          </div>
-          <i class="fab fa-youtube"></i>
-        </a>
-
         <a class="youtube-tile" href="https://youtu.be/RFLa1-l4-mw" target="_blank" rel="noopener noreferrer">
           <img src="assets/The Sky Never Stays Blue.jpg" alt="The Sky Never Stays Blue artwork">
           <div class="youtube-info">
             <h3>The Sky Never Stays Blue</h3>
-            <p>A song about that battle most of us fight daily. The constant feeling that something bad is waiting around the corner, carrying yesterday's wounds into today's sunshine, and fighting battles that haven't even happened yet.</p>
+            <p>Yesterday's wounds, tomorrow's worries and the exhausting habit of fighting battles that haven't happened yet.</p>
           </div>
           <i class="fab fa-youtube"></i>
         </a>
       </div>
+
+      <a class="btn" href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer">See Everything on YouTube</a>
+    </section>
+
+    <section class="section">
+      <div class="merch-callout">
+        <div>
+          <p class="eyebrow">Roadside trading post</p>
+          <h2>Wear the story</h2>
+          <p>BS&amp;B merch is being built around the same world as the music: motel signs, backroads, battered souls and designs that look like they've already lived a little.</p>
+        </div>
+        <a class="btn" href="merch.html">Explore Merch</a>
+      </div>
     </section>
 
     <section id="contact" class="contact section">
-      <p class="eyebrow">Follow the Backroad</p>
-      <h2>Find the Music</h2>
+      <div class="follow-head">
+        <p class="eyebrow">Follow the backroad</p>
+        <h2>Keep in touch</h2>
+        <p>New songs, new stories and whatever is waiting around the next bend.</p>
+      </div>
 
       <div class="wooden-sign">
         <a href="https://www.youtube.com/@BrokenSoulsAndBackroads" target="_blank" rel="noopener noreferrer" title="YouTube">
