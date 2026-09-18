@@ -49,7 +49,7 @@
 
   const mug = PRODUCTS.mug;
   if (mug) {
-    const mugImage = "assets/bsb-same-roads-mug-preview.jpg";
+    const mugImage = "assets/bsb-same-roads-mug-preview.jpg?v=2";
 
     mug.name = "Same Roads Two-Tone Mug";
     mug.price = "£16.99";
@@ -70,7 +70,7 @@
 
       if (img) {
         img.src = mugImage;
-        img.alt = "Same Roads Two-Tone Mug mockup";
+        img.alt = "Same Roads Two-Tone Mug mockup showing left, centre and right views";
         img.style.objectFit = "contain";
         img.style.background = "#fff";
       }
