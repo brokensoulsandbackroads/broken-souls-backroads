@@ -1,0 +1,9 @@
+{
+  "name": "broken-souls-backroads-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Broken Souls & Backroads website with a secure server-side fulfilment bridge.",
+  "engines": {
+    "node": ">=20"
+  }
+}
