@@ -49,7 +49,7 @@
 
   const mug = PRODUCTS.mug;
   if (mug) {
-    const mugImage = "assets/bsb-same-roads-mug-preview.jpg?v=2";
+    const mugImage = "assets/bsb-same-roads-mug-preview.jpg?v=3";
 
     mug.name = "Same Roads Two-Tone Mug";
     mug.price = "£16.99";
